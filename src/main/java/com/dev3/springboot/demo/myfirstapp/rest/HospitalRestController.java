@@ -13,16 +13,16 @@ public class HospitalRestController {
         return "Hello World";
     }
 
-   //expose a new endpoint for "workout"
+   //expose a new endpoint for "patient"
    @GetMapping("/patient")
    public String getPatient(){
        return "Get well soon!";
    }
-   //expose a new endpoint for "fortune"
+   //expose a new endpoint for "doctor"
 
    @GetMapping("/doctor")
    public String getDoctor(){
-       return "Today is your lucky day.";
+       return "The best doctor in the branch.";
    }
 
    //inject properties for: doctor.name and clinic.name
