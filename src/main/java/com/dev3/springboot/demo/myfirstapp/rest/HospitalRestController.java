@@ -9,37 +9,36 @@ public class HospitalRestController {
 
     //expose "/" that return "Hello World"
     @GetMapping("/")
-    public String sayHello(){
+    public String sayHello() {
         return "Hello World";
     }
 
-   //expose a new endpoint for "patient"
-   @GetMapping("/patient")
-   public String getPatient(){
-       return "Get well soon!";
-   }
-   //expose a new endpoint for "doctor"
+    //expose a new endpoint for "patient"
+    @GetMapping("/patient")
+    public String getPatient() {
+        return "Get well soon!";
+    }
 
-   @GetMapping("/doctor")
-   public String getDoctor(){
-       return "The best doctor in the branch.";
-   }
+    //expose a new endpoint for "doctor"
 
-   //inject properties for: doctor.name and clinic.name
+     @GetMapping("/doctor")
+     public String getDoctor(){
+         return "The best doctor in the branch.";
+     }
 
-   @Value("${doctor.name}")
-   private String doctorName;
+     //inject properties for: doctor.name and clinic.name
 
-   @Value("${clinic.name}")
-   private String clinicName;
+     @Value("${doctor.name}")
+     private String doctorName;
 
-   //expose new endpoint for "clinicinfo"
-   @GetMapping("/clinicinfo")
-   public String getTeamInfo(){
-       return "Coach: " + doctorName + ", Team name: " + clinicName;
-   }
+     @Value("${clinic.name}")
+     private String clinicName;
 
-
+     //expose new endpoint for "clinicinfo"
+     @GetMapping("/clinicinfo")
+     public String getClinicInfo(){
+         return "Doctor: " + doctorName + ", Clinic name: " + clinicName;
+     }
 
 
 }
