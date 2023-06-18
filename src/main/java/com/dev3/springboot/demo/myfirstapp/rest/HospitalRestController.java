@@ -3,7 +3,7 @@ package com.dev3.springboot.demo.myfirstapp.rest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+/*
 @RestController
 public class HospitalRestController {
 
@@ -40,5 +40,4 @@ public class HospitalRestController {
          return "Doctor: " + doctorName + ", Clinic name: " + clinicName;
      }
 
-
-}
+*/

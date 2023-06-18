@@ -7,24 +7,41 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-@Entity
+
 public class Student {
 
 
 
-    @NotBlank(message = "name can not be space")
-    @Size(min = 2,max = 25,message = "name ${validatedValue} must be between {min} and {max}")
-    @Column(nullable = false,length = 25)
-    private String name;
 
-    @Column(nullable = false,length = 25)
+
+
+    private String firstName;
+
+
     private String lastName;
 
+    public Student(){
 
+    }
 
+    public Student(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
