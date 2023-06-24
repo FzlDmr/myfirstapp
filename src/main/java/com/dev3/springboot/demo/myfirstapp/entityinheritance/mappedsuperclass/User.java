@@ -2,13 +2,13 @@ package com.dev3.springboot.demo.myfirstapp.entityinheritance.mappedsuperclass;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-
+@Table(name = "t_user")
 @Entity
-public
-class User extends BaseEntity {
+public class User extends BaseEntity {
 
-    @Column(nullable = false, unique = true)
+    
     private String username;
 
     private String password;
